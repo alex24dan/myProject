@@ -1,12 +1,9 @@
 // конкатынация
 let string = "some test string";
-value = string[0].toUpperCase() + "ome test strin" + string[15].toUpperCase();
+value = string[0].toUpperCase()+string.slice(1,string.length-1)+string[string.length-1].toUpperCase();
 console.log(value);
 // template string
-let str = `${string[0].toUpperCase()}${string.slice(
-  1,
-  string.length - 1
-)}${string[15].toUpperCase()}`;
+let str = `${string[0].toUpperCase()}${string.slice(1,string.length-1)}${string[string.length-1].toUpperCase()}`;
 console.log(str);
 // положение string
 position = string.indexOf("string");
