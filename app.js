@@ -3,7 +3,10 @@ let string = "some test string";
 value = string[0].toUpperCase() + "ome test strin" + string[15].toUpperCase();
 console.log(value);
 // template string
-let str = `${string[0].toUpperCase()}ome test strin${string[15].toUpperCase()}`;
+let str = `${string[0].toUpperCase()}${string.slice(
+  1,
+  string.length - 1
+)}${string[15].toUpperCase()}`;
 console.log(str);
 // положение string
 position = string.indexOf("string");
@@ -26,9 +29,9 @@ console.log(max);
 // случайное число
 let random = Math.random();
 let fix = random.toFixed(2);
-console.log(fix);
+console.log(+fix);
 // целое число
-let int = Math.ceil(Math.random() * 100);
+let int = Math.floor(Math.random() * 10);
 console.log(int);
 // приведение к норме 1
 let a = 0.7 + 0.6;
